@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  jwt:
+    image: ${DOCKER_REGISTRY-}jwt
+    build:
+      context: .
+      dockerfile: JWT/Dockerfile
+
+  okey.api:
+    image: ${DOCKER_REGISTRY-}okeyapi
+    build:
+      context: .
+      dockerfile: Okey.API/Dockerfile
+
